@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,7 +12,7 @@ initial-scale=1.0,
 maximum-scale=1.0,
 user-scalable=no">
 
-<title> FELIZ 🌻</title>
+<title>FELIZ 🌻</title>
 
 <style>
 
@@ -187,7 +188,6 @@ canvas{
         0 0 100px rgba(255,180,0,.5);
 
     animation:
-
         nameGlow 3s ease-in-out infinite alternate;
 
 }
@@ -196,15 +196,11 @@ canvas{
 @keyframes nameGlow{
 
     from{
-
         filter:brightness(.9);
-
     }
 
     to{
-
         filter:brightness(1.35);
-
     }
 
 }
@@ -225,7 +221,6 @@ canvas{
     margin:10px 0 20px;
 
     border:
-
         1px solid
         rgba(255,220,100,.55);
 
@@ -280,17 +275,14 @@ canvas{
 .open{
 
     padding:
-
         13px 30px;
 
     border:
-
         1px solid #ffd65c;
 
     border-radius:50px;
 
     background:
-
         rgba(255,190,0,.07);
 
     color:#ffeaa1;
@@ -298,7 +290,6 @@ canvas{
     font-size:18px;
 
     box-shadow:
-
         0 0 15px
         rgba(255,190,0,.2);
 
@@ -307,9 +298,7 @@ canvas{
 }
 
 .open:active{
-
     transform:scale(.93);
-
 }
 
 
@@ -328,7 +317,6 @@ canvas{
     transform:scale(1.08);
 
     transition:
-
         opacity 1.7s ease,
         transform 2s ease;
 
@@ -366,16 +354,24 @@ canvas{
 }
 
 
+/*
+   CAMBIO:
+   Ahora "ESPERO QUE TE GUSTE" usa una letra
+   más clara y fácil de leer.
+*/
+
 .title h1{
 
-    font-family:'Great Vibes',cursive;
+    font-family:'Cormorant Garamond',serif;
 
     font-size:
-        clamp(50px,14vw,90px);
+        clamp(38px,10vw,70px);
 
-    font-weight:400;
+    font-weight:600;
 
-    color:#fff0aa;
+    letter-spacing:2px;
+
+    color:#fff4c5;
 
     text-shadow:
 
@@ -427,15 +423,12 @@ canvas{
     top:58%;
 
     width:
-
         min(65px,16vw);
 
     height:
-
         min(65px,16vw);
 
     transform:
-
         translate(-50%,-50%);
 
     z-index:8;
@@ -468,14 +461,12 @@ canvas{
     top:58%;
 
     transform:
-
         translate(-50%,-50%)
         rotateX(68deg);
 
     border-radius:50%;
 
     border:
-
         1px solid
         rgba(255,210,70,.22);
 
@@ -621,10 +612,10 @@ canvas{
 
 
 /* =====================================================
-   FLORES ORBITANDO
+   FOTOS FLOTANDO POR LA GALAXIA
 ===================================================== */
 
-.orbit-flower{
+.floating-photo{
 
     position:absolute;
 
@@ -632,123 +623,49 @@ canvas{
 
     top:58%;
 
-    width:60px;
+    width:55px;
 
-    height:60px;
+    height:55px;
 
     object-fit:cover;
 
     border-radius:50%;
 
-    z-index:12;
+    z-index:13;
 
-    filter:
+    border:
+        1px solid
+        rgba(255,225,120,.65);
 
-        drop-shadow(
-            0 0 8px
-            rgba(255,200,0,.8)
-        );
+    box-shadow:
 
-}
+        0 0 8px rgba(255,210,70,.8),
 
+        0 0 20px rgba(255,190,0,.35);
 
-.of1{
+    pointer-events:none;
 
-    animation:
-        flowerOrbit1 14s linear infinite;
+    will-change:transform;
 
-}
-
-
-.of2{
-
-    animation:
-        flowerOrbit2 19s linear infinite;
+    transition:
+        width .4s ease,
+        height .4s ease;
 
 }
 
 
-.of3{
+/* Diferentes tamaños */
 
-    animation:
-        flowerOrbit3 24s linear infinite;
-
-}
-
-
-@keyframes flowerOrbit1{
-
-    from{
-
-        transform:
-            translate(-50%,-50%)
-            rotate(0deg)
-            translateX(42vw)
-            rotate(0deg);
-
-    }
-
-    to{
-
-        transform:
-            translate(-50%,-50%)
-            rotate(360deg)
-            translateX(42vw)
-            rotate(-360deg);
-
-    }
-
-}
-
-
-@keyframes flowerOrbit2{
-
-    from{
-
-        transform:
-            translate(-50%,-50%)
-            rotate(120deg)
-            translateX(34vw)
-            rotate(-120deg);
-
-    }
-
-    to{
-
-        transform:
-            translate(-50%,-50%)
-            rotate(480deg)
-            translateX(34vw)
-            rotate(-480deg);
-
-    }
-
-}
-
-
-@keyframes flowerOrbit3{
-
-    from{
-
-        transform:
-            translate(-50%,-50%)
-            rotate(240deg)
-            translateX(27vw)
-            rotate(-240deg);
-
-    }
-
-    to{
-
-        transform:
-            translate(-50%,-50%)
-            rotate(600deg)
-            translateX(27vw)
-            rotate(-600deg);
-
-    }
-
-}
+.fp1{ width:58px; height:58px; }
+.fp2{ width:48px; height:48px; }
+.fp3{ width:62px; height:62px; }
+.fp4{ width:45px; height:45px; }
+.fp5{ width:54px; height:54px; }
+.fp6{ width:50px; height:50px; }
+.fp7{ width:60px; height:60px; }
+.fp8{ width:46px; height:46px; }
+.fp9{ width:56px; height:56px; }
+.fp10{ width:52px; height:52px; }
 
 
 /* =====================================================
@@ -815,7 +732,6 @@ canvas{
     z-index:25;
 
     border:
-
         1px solid
         rgba(255,210,70,.5);
 
@@ -899,7 +815,6 @@ canvas{
     padding:20px;
 
     background:
-
         rgba(0,0,0,.92);
 
     backdrop-filter:blur(14px);
@@ -940,9 +855,7 @@ canvas{
 
 
 .panel::-webkit-scrollbar{
-
     display:none;
-
 }
 
 
@@ -981,7 +894,6 @@ canvas{
     border-radius:50%;
 
     border:
-
         1px solid
         rgba(255,210,70,.45);
 
@@ -1026,7 +938,6 @@ canvas{
         );
 
     border:
-
         1px solid
         rgba(255,210,70,.32);
 
@@ -1043,9 +954,7 @@ canvas{
 
 
 .card:active{
-
     transform:scale(.95);
-
 }
 
 
@@ -1155,7 +1064,6 @@ canvas{
         );
 
     border:
-
         1px solid
         rgba(255,210,70,.45);
 
@@ -1215,7 +1123,6 @@ canvas{
     border-radius:30px;
 
     border:
-
         1px solid
         rgba(255,210,70,.4);
 
@@ -1250,14 +1157,46 @@ canvas{
 
     }
 
-    .orbit-flower{
+    .floating-photo{
 
-        width:45px;
-        height:45px;
+        transform-origin:center;
 
     }
 
+    .fp1{ width:44px; height:44px; }
+    .fp2{ width:39px; height:39px; }
+    .fp3{ width:47px; height:47px; }
+    .fp4{ width:37px; height:37px; }
+    .fp5{ width:42px; height:42px; }
+    .fp6{ width:40px; height:40px; }
+    .fp7{ width:45px; height:45px; }
+    .fp8{ width:38px; height:38px; }
+    .fp9{ width:43px; height:43px; }
+    .fp10{ width:41px; height:41px; }
+
 }
+
+
+/* =====================================================
+   ANIMACIÓN SUAVE DE LAS FOTOS
+===================================================== */
+
+@keyframes photoFloat{
+
+    0%{
+        filter:brightness(.8);
+    }
+
+    50%{
+        filter:brightness(1.15);
+    }
+
+    100%{
+        filter:brightness(.8);
+    }
+
+}
+
 
 </style>
 
@@ -1281,26 +1220,13 @@ canvas{
     </div>
 
     <div class="intro-name">
-        
     </div>
-
-
-    <!--
-    ==================================================
-    IMAGEN DE PORTADA
-
-    Coloca aquí:
-
-    imagenes/portada.jpg
-    ==================================================
-    -->
 
     <img
         class="cover"
         src="imagenes/portada.jpg"
         alt="Portada"
     >
-
 
     <h1 class="intro-title">
 
@@ -1309,11 +1235,9 @@ canvas{
 
     </h1>
 
-
     <div class="date">
         21 DE SEPTIEMBRE
     </div>
-
 
     <p class="intro-message">
 
@@ -1326,7 +1250,6 @@ canvas{
         tenga para ofrecerte.
 
     </p>
-
 
     <button
         class="open"
@@ -1350,11 +1273,11 @@ canvas{
     <div class="title">
 
         <h1>
-       ESPERO QUE TE GUSTE       
+            ESPERO QUE TE GUSTE
         </h1>
-         
+
         <span>
-        NO IMPORTA LA DISTANCIA PARA SER DETALLISTA  ♡
+            NO IMPORTA LA DISTANCIA PARA SER DETALLISTA ♡
         </span>
 
     </div>
@@ -1389,35 +1312,71 @@ canvas{
     <div id="heart"></div>
 
 
-    <!-- FLORES ORBITANDO -->
+    <!-- =================================================
+         LAS 10 FOTOS DEL LISTADO
+         AHORA TAMBIÉN FLOTARÁN POR LA GALAXIA
+    ================================================== -->
 
     <img
-        class="orbit-flower of1"
+        class="floating-photo fp1"
         src="imagenes/girasol.jpg"
         alt="Girasol"
     >
 
     <img
-        class="orbit-flower of2"
-        src="imagenes/ramo.jpg"
-        alt="Flores"
+        class="floating-photo fp2"
+        src="imagenes/tulipan.jpg"
+        alt="Tulipán"
     >
 
     <img
-        class="orbit-flower of3"
-        src="imagenes/tulipan.jpg"
-        alt="Tulipán"
-
-    >
-   <img
-        class="orbit-flower of4"
-        src="imagenes/rosa amarilla.jpg"
-        alt="rosa amarilla"
-    >
-     <img
-        class="orbit-flower of5"
+        class="floating-photo fp3"
         src="imagenes/margarita.jpg"
-        alt="margarita"
+        alt="Margarita"
+    >
+
+    <img
+        class="floating-photo fp4"
+        src="imagenes/rosa amarilla.jpg"
+        alt="Rosa amarilla"
+    >
+
+    <img
+        class="floating-photo fp5"
+        src="imagenes/calendula.jpg"
+        alt="Caléndula"
+    >
+
+    <img
+        class="floating-photo fp6"
+        src="imagenes/dalia.jpg"
+        alt="Dalia"
+    >
+
+    <img
+        class="floating-photo fp7"
+        src="imagenes/crisantemo.jpg"
+        alt="Crisantemo"
+    >
+
+    <img
+        class="floating-photo fp8"
+        src="imagenes/narciso.jpg"
+        alt="Narciso"
+    >
+
+    <img
+        class="floating-photo fp9"
+        src="imagenes/silvestre.jpg"
+        alt="Flor silvestre"
+    >
+
+    <img
+        class="floating-photo fp10"
+        src="imagenes/ramo.jpg"
+        alt="Ramo"
+    >
+
 
     <!-- MÚSICA -->
 
@@ -1587,7 +1546,7 @@ canvas{
             onclick="openFlower(
                 'Rosa amarilla 🌹',
                 'Puede representar amistad, afecto y cariño. Una forma sencilla de decirte cuánto valoro tu presencia.',
-                'imagenes/rosa.jpg'
+                'imagenes/rosa amarilla.jpg'
             )">
 
             <img
@@ -1854,6 +1813,7 @@ canvas{
 
 <script>
 
+
 /* =====================================================
    VARIABLES
 ===================================================== */
@@ -2056,6 +2016,7 @@ function resizeGalaxy(){
 
 }
 
+
 resizeGalaxy();
 
 
@@ -2144,10 +2105,6 @@ function animateGalaxy(){
         p.angle += p.speed;
 
 
-        /*
-          Forma espiral
-        */
-
         const spiral =
             p.angle +
             p.radius*7 +
@@ -2157,11 +2114,6 @@ function animateGalaxy(){
         const r =
             p.radius*maxRadius;
 
-
-        /*
-          Aplanamos la galaxia
-          para darle perspectiva
-        */
 
         const x =
             cx+
@@ -2173,10 +2125,6 @@ function animateGalaxy(){
             Math.sin(spiral)
             *r*.30;
 
-
-        /*
-          Brillo según distancia
-        */
 
         const brightness =
             Math.max(
@@ -2212,10 +2160,6 @@ function animateGalaxy(){
 
     });
 
-
-    /*
-      Núcleo luminoso
-    */
 
     const gradient =
         galaxyCtx.createRadialGradient(
@@ -2301,11 +2245,6 @@ function createHeart(){
 
     const total=1000;
 
-
-    /*
-       Primero se crea el contorno
-       y después el interior.
-    */
 
     for(
         let i=0;
@@ -2402,10 +2341,6 @@ function createHeart(){
         heart.appendChild(dot);
 
 
-        /*
-          Aparecen progresivamente
-        */
-
         setTimeout(()=>{
 
             dot.animate(
@@ -2445,6 +2380,226 @@ function createHeart(){
     }
 
 }
+
+
+/* =====================================================
+   FOTOS FLOTANTES
+===================================================== */
+
+/*
+   Las 10 fotos giran alrededor de la galaxia.
+   Cada una tiene una órbita, velocidad y profundidad
+   diferente para que no parezcan pegadas entre sí.
+*/
+
+const floatingPhotos =
+document.querySelectorAll(".floating-photo");
+
+
+const photoData = [
+
+    {
+        radius:.44,
+        angle:0,
+        speed:.0022,
+        depth:.30
+    },
+
+    {
+        radius:.35,
+        angle:1.1,
+        speed:-.0018,
+        depth:.42
+    },
+
+    {
+        radius:.50,
+        angle:2.1,
+        speed:.0015,
+        depth:.25
+    },
+
+    {
+        radius:.39,
+        angle:3.0,
+        speed:-.0024,
+        depth:.38
+    },
+
+    {
+        radius:.56,
+        angle:4.0,
+        speed:.0017,
+        depth:.28
+    },
+
+    {
+        radius:.32,
+        angle:4.8,
+        speed:-.0015,
+        depth:.45
+    },
+
+    {
+        radius:.47,
+        angle:5.5,
+        speed:.0020,
+        depth:.32
+    },
+
+    {
+        radius:.60,
+        angle:.65,
+        speed:-.0013,
+        depth:.24
+    },
+
+    {
+        radius:.42,
+        angle:2.8,
+        speed:.0018,
+        depth:.40
+    },
+
+    {
+        radius:.53,
+        angle:5.0,
+        speed:-.0019,
+        depth:.30
+    }
+
+];
+
+
+function animateFloatingPhotos(){
+
+    const width =
+        window.innerWidth;
+
+    const height =
+        window.innerHeight;
+
+
+    const centerX =
+        width/2;
+
+    const centerY =
+        height*.58;
+
+
+    const baseRadius =
+        Math.min(
+            width,
+            height
+        );
+
+
+    floatingPhotos.forEach(
+        (photo,index)=>{
+
+            const data =
+                photoData[index];
+
+
+            data.angle +=
+                data.speed;
+
+
+            /*
+               Órbita elíptica para dar
+               sensación de profundidad.
+            */
+
+            const radius =
+                baseRadius*
+                data.radius;
+
+
+            const x =
+                Math.cos(
+                    data.angle
+                )*
+                radius;
+
+
+            const y =
+                Math.sin(
+                    data.angle
+                )*
+                radius*
+                data.depth;
+
+
+            /*
+               Pequeño movimiento vertical
+               adicional para que las fotos
+               parezcan flotar.
+            */
+
+            const floating =
+                Math.sin(
+                    data.angle*2.3+
+                    index
+                )*8;
+
+
+            /*
+               Escala según la posición.
+               Las fotos parecen acercarse
+               y alejarse suavemente.
+            */
+
+            const depthScale =
+                0.82+
+                (
+                    (Math.sin(data.angle)+1)
+                    *.10
+                );
+
+
+            photo.style.transform =
+                `
+                translate(
+                    calc(-50% + ${x}px),
+                    calc(-50% + ${y+floating}px)
+                )
+                scale(${depthScale})
+                rotate(${Math.sin(data.angle)*7}deg)
+                `;
+
+
+            /*
+               Brillo variable.
+            */
+
+            const glow =
+                0.55+
+                (
+                    Math.sin(
+                        data.angle*1.7+
+                        index
+                    )+1
+                )*.18;
+
+
+            photo.style.boxShadow =
+                `
+                0 0 8px rgba(255,210,70,.8),
+                0 0 22px rgba(255,190,0,${glow})
+                `;
+
+        }
+    );
+
+
+    requestAnimationFrame(
+        animateFloatingPhotos
+    );
+
+}
+
+
+animateFloatingPhotos();
 
 
 /* =====================================================
@@ -2577,11 +2732,6 @@ document.addEventListener(
             touchX-endX;
 
 
-        /*
-          Deslizar hacia la izquierda
-          abre las flores.
-        */
-
         if(
             difference>100 &&
             universe.classList.contains("show")
@@ -2603,11 +2753,6 @@ document.addEventListener(
 document.addEventListener(
     "pointerdown",
     e=>{
-
-        /*
-          Crear pequeña explosión
-          de partículas en el punto tocado.
-        */
 
         if(
             !universe.classList.contains(
@@ -2736,7 +2881,9 @@ document.addEventListener(
     }
 );
 
+
 </script>
 
 </body>
 </html>
+```
